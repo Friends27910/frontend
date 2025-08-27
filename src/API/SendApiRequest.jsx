@@ -2,7 +2,7 @@ import axios from "axios"
 import React from "react";
 import { isExpired, decodeToken } from "react-jwt";
 import {searchData} from "./StroageApi.js"
-const uri = "http://localhost:2009/api"
+const uri = "https://backend-delta-taupe.vercel.app/Api"
 export const ApiRequest =  async(Data) =>{
   const Data1 = {
     name:Data.Name,
