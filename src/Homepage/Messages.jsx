@@ -2,7 +2,6 @@ import "../css/Message.css"
 import axios from "axios"
 import Logo from "../images/Logo.png"
 import React from 'react';
-import "../css/Global.css"
 import {Messageapi} from "../API/SendApiRequest.jsx"
 import {searchMessageapi} from "../API/SendApiRequest.jsx"
 import UserDetails from "../API/User details.js"
@@ -16,7 +15,7 @@ const Messages = () =>{
   const [input,setInput] = useState()
   const[oldmessage,setOldmessage] = useState([{
     "Message":"Welcome",
-    "PostedBy":"ADMIN"
+    "PostedBy":"JOLLY BRO"
   }])
   console.log(input);
   const submit = async(e) =>{
@@ -46,19 +45,20 @@ searchMessageapi()
   <FlipMove>
     {oldmessage.map(({Message,PostedBy})=>{
     return(
-      <Styledmessage  key={1} className="text-3xl font-bold underline" message={Message} PostedBy={PostedBy}/>
+      <Styledmessage  key={1} message={Message} PostedBy={PostedBy}/>
       )
    })}
    </FlipMove>
   </div>
    <div className="Main">
-
+   
    <form className="app_form" onSubmit={submit}>
    <div className="input">
     <FormControl className="app_FormControl">
-  <input placeholder="Enter Your Text.." className="textInput"   onChange={(event)=>{
-      setInput(event.target.value);
-  }}/>
+   <Input className="app_input" placeholder="Enter your message...!" onChange={(e)=>{
+     setInput(e.target.value)
+   }} />
+   <IconButton varaint="contained" type="submit" color="primary" className="BTN_icon" disabled={!input}/>
     </FormControl>
    <SendIcon />
    </div>
@@ -66,7 +66,8 @@ searchMessageapi()
    </form>
    </div>
    <style>
-
+   {
+   }
    </style>
    </>
   )
