@@ -1,0 +1,25 @@
+*{
+margin: 0;
+padding: 0;
+}
+.userDetails{
+  align-items: center; 
+  justify-content: center;
+  text-align: center;
+}.userDetails h1{
+  color: #333D79FF;
+}
+.Messagescontent{
+  margin: 10px;
+  padding: 10px;
+  width: fit-content;
+  }.Mymessage{
+ font-weight: 800;
+ color: blue;
+  text-align: right;
+  justify-content: right;
+  align-items: right;
+}
+.Othermessage{
+  color:red;
+}
